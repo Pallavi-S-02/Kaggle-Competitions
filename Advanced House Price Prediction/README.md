@@ -17,7 +17,7 @@ The project will predict the cost price of houses with the help of linear regrer
 ### Outliers 
 2) We have drawn a subplot for "GrLivArea" feature.We can see at the bottom right two with extremely large GrLivArea that are of a low price. These values are huge oultliers. Therefore, we can safely delete them.
 #### Note :
-Outliers removal is note always safe. We decided to delete these two as they are very huge and really bad ( extremely large areas for very low prices).
+Outliers removal is not always safe. We decided to delete these two as they are very huge and really bad ( extremely large areas for very low prices).
 
 There are probably others outliers in the training data. However, removing all them may affect badly our models if ever there were also outliers in the test data. That's why , instead of removing them all, we will just manage to make some of our models robust on them.
 
@@ -42,7 +42,7 @@ There are probably others outliers in the training data. However, removing all t
 ## Stacking models:
 ### Simplest Stacking approach : Averaging base models
 
-11)We made a class AveragingModels that finds the average between the predictions of Elastic Net Regression, Gradient Boosting Regression, Kernel Ridge Regression and LASSO Regression.Of course we could easily add more models in the mix.
+11) We made a class AveragingModels that finds the average between the predictions of Elastic Net Regression, Gradient Boosting Regression, Kernel Ridge Regression and LASSO Regression.Of course we could easily add more models in the mix.
 
 ### Less simple Stacking : Adding a Meta-model
 In this approach, we add a meta-model on averaged base models and use the out-of-folds predictions of these base models to train our meta-model.
